@@ -24,5 +24,9 @@ public class StudentProfile {
     @Column(nullable = false,name = "gender")
     private String gender;
 
+    @OneToOne
+    @JoinColumn(name = "student_id", nullable = false, unique = true)
+    private Student student;
+
 
 }
