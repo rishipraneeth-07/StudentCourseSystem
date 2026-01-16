@@ -31,5 +31,8 @@ public class Student {
     @Column(nullable = false,name = "created_on")
     private LocalDateTime createdOn;
 
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+    private StudentProfile studentProfile;
+
 
 }
