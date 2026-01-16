@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
-import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "course")
+@Table(
+        name = "course",
+        uniqueConstraints = @UniqueConstraint(columnNames = "course_code")
+)
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,7 +23,7 @@ public class Course {
     @Column(name = "course_name", nullable = false)
     private String courseName;
 
-    @Column(name = "course_code", nullable = false,unique = true)
+    @Column(name = "course_code", nullable = false)
     private String courseCode;
 
     @Column(name = "credits", nullable = false)
@@ -29,4 +31,7 @@ public class Course {
 
     @Column(name = "duration_in_weeks", nullable = false)
     private Integer duration;
+
+    @OneToMany(mappedBy = "course",cascade=CascadeType.ALL,orphanRemoval = true)
+    private List<Enrollment> enrollments = new ArrayList<>();
 }

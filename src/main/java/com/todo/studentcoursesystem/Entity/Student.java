@@ -34,5 +34,10 @@ public class Student {
     @OneToOne(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private StudentProfile studentProfile;
 
+    @PrePersist
+    protected void onCreate() {
+        this.createdOn = LocalDateTime.now();
+    }
+
 
 }
