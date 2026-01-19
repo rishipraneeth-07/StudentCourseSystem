@@ -13,9 +13,9 @@ import java.util.List;
 @Service
 public class EnrollmentServiceImpl implements EnrollmentService {
 
-    private EnrollmentRepo enrollmentRepo;
-    private CourseRepo courseRepo;
-    private StudentRepo studentRepo;
+    private final EnrollmentRepo enrollmentRepo;
+    private final CourseRepo courseRepo;
+    private final StudentRepo studentRepo;
 
     public EnrollmentServiceImpl(EnrollmentRepo enrollmentRepo, CourseRepo courseRepo, StudentRepo studentRepo) {
         this.enrollmentRepo = enrollmentRepo;
@@ -48,7 +48,7 @@ public class EnrollmentServiceImpl implements EnrollmentService {
     public List<Course> getAllCoursesOfStudent(Long studentId) {
         Student student = studentRepo.findById(studentId)
                 .orElseThrow(() -> new RuntimeException("Student not found with id: " + studentId));
-        List<Enrollment> enrollments=enrollmentRepo.findAllByStudentId(studentId);
+        List<Enrollment> enrollments = enrollmentRepo.findAllByStudentId(studentId);
         return enrollments.stream()
                 .map(Enrollment::getCourse)
                 .toList();
@@ -58,7 +58,7 @@ public class EnrollmentServiceImpl implements EnrollmentService {
     public List<Student> getAllStudentsOfCourse(Long courseId) {
         Course course = courseRepo.findById(courseId)
                 .orElseThrow(() -> new RuntimeException("Course not found with id: " + courseId));
-        List<Enrollment> enrollments=enrollmentRepo.findAllByCourseId(courseId);
+        List<Enrollment> enrollments = enrollmentRepo.findAllByCourseId(courseId);
         return enrollments.stream()
                 .map(Enrollment::getStudent)
                 .toList();
@@ -66,6 +66,12 @@ public class EnrollmentServiceImpl implements EnrollmentService {
 
     @Override
     public void removeEnrollment(Long studentId, Long courseId) {
+        Enrollment enrollment = enrollmentRepo
+                .findByStudentIdAndCourseId(studentId, courseId)
+                .orElseThrow(() ->
+                        new RuntimeException("Enrollment not found for student "
+                                + studentId + " and course " + courseId));
 
+        enrollmentRepo.delete(enrollment);
     }
 }
