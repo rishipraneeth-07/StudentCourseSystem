@@ -56,7 +56,12 @@ public class EnrollmentServiceImpl implements EnrollmentService {
 
     @Override
     public List<Student> getAllStudentsOfCourse(Long courseId) {
-        return List.of();
+        Course course = courseRepo.findById(courseId)
+                .orElseThrow(() -> new RuntimeException("Course not found with id: " + courseId));
+        List<Enrollment> enrollments=enrollmentRepo.findAllByCourseId(courseId);
+        return enrollments.stream()
+                .map(Enrollment::getStudent)
+                .toList();
     }
 
     @Override
