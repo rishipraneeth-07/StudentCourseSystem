@@ -32,7 +32,16 @@ public class AdminController {
         }
         Student createStudent=studentService.createStudent(student);
         return ResponseEntity.ok(createStudent);
+    }
 
+    @GetMapping("/students/{id}")
+    public ResponseEntity<Student> getStudent(@PathVariable Long id
+                                              ,@RequestHeader(value = "X-Admin",required = false) String xAdmin){
+        if (!"true".equals(xAdmin)) {
+            throw new RuntimeException("Access denied: Admin only");
+        }
+        Student student=studentService.getStudent(id);
+        return ResponseEntity.ok(student);
 
     }
 }
