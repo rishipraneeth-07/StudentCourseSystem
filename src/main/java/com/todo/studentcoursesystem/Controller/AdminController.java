@@ -44,4 +44,16 @@ public class AdminController {
         return ResponseEntity.ok(student);
 
     }
+
+    @PutMapping("/students/{id}")
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student
+                                                 , @PathVariable Long id
+                                                 ,@RequestHeader(value = "X-Admin",required = false)String xAdmin){
+        if (!"true".equals(xAdmin)) {
+            throw new RuntimeException("Access denied: Admin only");
+        }
+        Student updateStudent=studentService.updateStudent(student, id);
+        return ResponseEntity.ok(updateStudent);
+
+    }
 }
