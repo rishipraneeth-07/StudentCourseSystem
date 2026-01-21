@@ -4,7 +4,6 @@ import com.todo.studentcoursesystem.Entity.Student;
 import com.todo.studentcoursesystem.Service.CourseService;
 import com.todo.studentcoursesystem.Service.EnrollmentService;
 import com.todo.studentcoursesystem.Service.StudentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +12,9 @@ import org.springframework.web.bind.annotation.*;
 public class AdminController {
 
 
-    private CourseService courseService;
-    private EnrollmentService enrollmentService;
-    private StudentService studentService;
+    private final CourseService courseService;
+    private final EnrollmentService enrollmentService;
+    private final StudentService studentService;
 
 
     public AdminController(CourseService courseService, EnrollmentService enrollmentService, StudentService studentService) {
