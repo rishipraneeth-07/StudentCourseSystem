@@ -56,4 +56,14 @@ public class AdminController {
         return ResponseEntity.ok(updateStudent);
 
     }
+    @DeleteMapping("/students/{id}")
+    public ResponseEntity<Void> deleteStudent(@PathVariable Long id,
+                               @RequestHeader(value = "X-Admin",required = false) String xAdmin){
+        if (!"true".equals(xAdmin)) {
+            throw new RuntimeException("Access denied: Admin only");
+        }
+        studentService.deleteStudent(id);
+        return ResponseEntity.noContent().build();
+
+    }
 }
