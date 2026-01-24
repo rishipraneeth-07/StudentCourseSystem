@@ -36,7 +36,7 @@
 
 ## Testing Using Postman
 
-- Students CRUD Operations
+## Students CRUD Operations
 
 ### POST (4 students)
 
@@ -57,6 +57,17 @@
 ### DELETE (student-2)
 
 <img width="1921" height="812" alt="Screenshot 2026-01-24 113714" src="https://github.com/user-attachments/assets/67476cc8-b773-4f49-aa74-338da307a1eb" />
+
+## Courses
+
+### POST (2 courses)  
+<img width="1923" height="972" alt="Screenshot 2026-01-24 113818" src="https://github.com/user-attachments/assets/92a589cc-c3a5-4581-bc29-6ef97957e98c" />
+
+### GET (Course by ID)
+<img width="1915" height="981" alt="Screenshot 2026-01-24 115233" src="https://github.com/user-attachments/assets/25acd42a-e485-4328-8f66-5f99ff232a04" />
+
+
+   
 
 
 
