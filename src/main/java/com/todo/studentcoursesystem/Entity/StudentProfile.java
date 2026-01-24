@@ -1,5 +1,6 @@
 package com.todo.studentcoursesystem.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,6 +27,7 @@ public class StudentProfile {
 
     @OneToOne
     @JoinColumn(name = "student_id", nullable = false, unique = true)
+    @JsonIgnore
     private Student student;
 
 
