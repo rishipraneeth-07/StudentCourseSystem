@@ -58,6 +58,11 @@
 
 <img width="1921" height="812" alt="Screenshot 2026-01-24 113714" src="https://github.com/user-attachments/assets/67476cc8-b773-4f49-aa74-338da307a1eb" />
 
+### Attached StudentProfile to Student by id
+
+<img width="1922" height="1110" alt="Screenshot 2026-01-24 121752" src="https://github.com/user-attachments/assets/8c55f797-d6e9-493f-a7dd-1cd408a1d8b8" />
+
+
 ## Courses
 
 ### POST (2 courses)  
