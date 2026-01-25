@@ -23,7 +23,7 @@ public class AdminController {
         this.studentService = studentService;
     }
 
-    @PostMapping("/students")
+    @PostMapping
     public ResponseEntity<Student> createStudent(@RequestBody Student student
                                                  ,@RequestHeader(value = "X-Admin",required = false) String xAdmin){
         if (!"true".equals(xAdmin)) {
