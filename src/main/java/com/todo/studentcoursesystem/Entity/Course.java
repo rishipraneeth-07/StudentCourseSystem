@@ -1,5 +1,6 @@
 package com.todo.studentcoursesystem.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,5 +34,6 @@ public class Course {
     private Integer duration;
 
     @OneToMany(mappedBy = "course",cascade=CascadeType.ALL,orphanRemoval = true)
+    @JsonIgnore
     private List<Enrollment> enrollments = new ArrayList<>();
 }
