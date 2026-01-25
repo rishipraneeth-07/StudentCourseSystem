@@ -71,8 +71,27 @@
 ### GET (Course by ID)
 <img width="1915" height="981" alt="Screenshot 2026-01-24 115233" src="https://github.com/user-attachments/assets/25acd42a-e485-4328-8f66-5f99ff232a04" />
 
+## Enrollments
+
+### POST (studentId &courseId)
+
+<img width="1918" height="1310" alt="Screenshot 2026-01-25 112524" src="https://github.com/user-attachments/assets/07eb1dbb-2a86-4a3e-b5b9-b210af234d8a" />
+
+### GET (Get All Courses of Student)
+
+<img width="1918" height="1025" alt="Screenshot 2026-01-25 112614" src="https://github.com/user-attachments/assets/b66ac89e-3ffd-4aa7-9e0e-defb469e4971" />
+
+### GET (Get All Students of Course)
 
    
+<img width="1919" height="1038" alt="Screenshot 2026-01-25 112645" src="https://github.com/user-attachments/assets/7071d904-efc9-420b-a3ca-45fe92c63237" />
+
+### DELETE 
+
+<img width="1913" height="816" alt="Screenshot 2026-01-25 112721" src="https://github.com/user-attachments/assets/07dd1928-3e4f-4665-935e-b9014c77dc66" />
+
+
+
 
 
 
