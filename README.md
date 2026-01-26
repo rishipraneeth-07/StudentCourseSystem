@@ -100,6 +100,16 @@
 
 <img width="1919" height="994" alt="Screenshot 2026-01-26 113159" src="https://github.com/user-attachments/assets/69d1e81a-e4bd-41c7-a285-2ca26cf31185" />
 
+## PUT
+
+
+<img width="1915" height="973" alt="Screenshot 2026-01-26 113237" src="https://github.com/user-attachments/assets/924e6452-ac70-4fd3-8595-ae688ca5c20f" />
+
+## DELETE
+
+
+<img width="1915" height="808" alt="Screenshot 2026-01-26 113316" src="https://github.com/user-attachments/assets/cccd931c-3b61-4d30-b842-5e8e040c860f" />
+
 
 
 
