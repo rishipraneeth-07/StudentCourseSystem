@@ -90,6 +90,17 @@
 
 <img width="1913" height="816" alt="Screenshot 2026-01-25 112721" src="https://github.com/user-attachments/assets/07dd1928-3e4f-4665-935e-b9014c77dc66" />
 
+## Admin
+
+## POST
+
+<img width="1924" height="985" alt="Screenshot 2026-01-26 113043" src="https://github.com/user-attachments/assets/e10e2d40-c02a-4bed-b19e-84da6c668a8c" />
+
+## GET
+
+<img width="1919" height="994" alt="Screenshot 2026-01-26 113159" src="https://github.com/user-attachments/assets/69d1e81a-e4bd-41c7-a285-2ca26cf31185" />
+
+
 
 
 
