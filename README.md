@@ -38,6 +38,11 @@
 
 <img width="2424" height="1232" alt="Screenshot 2026-01-27 162114" src="https://github.com/user-attachments/assets/fc3ae183-43ef-4b02-9e3f-24e0f8b3bd94" />
 
+## EntityRelationship diagram
+
+<img width="1265" height="829" alt="Screenshot 2026-01-27 202324" src="https://github.com/user-attachments/assets/bb8e06b6-619d-48ce-95fe-f7116018dac4" />
+
+
 
 ## Testing Using Postman
 
