@@ -34,6 +34,11 @@
 
 - Access controlled using request header
 
+## Application Flow
+
+<img width="2424" height="1232" alt="Screenshot 2026-01-27 162114" src="https://github.com/user-attachments/assets/fc3ae183-43ef-4b02-9e3f-24e0f8b3bd94" />
+
+
 ## Testing Using Postman
 
 ## Students CRUD Operations
